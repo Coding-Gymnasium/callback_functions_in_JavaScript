@@ -8,11 +8,13 @@ function executeCallback(callback) {
 }
 
 // Anonymous function
-executeCallback(function() { // inlining. Writing a function in line
-  console.log('Hello');
-});
+// executeCallback(function() { // inlining. Writing a function in line
+//   console.log('Hello');
+// });
+executeCallback(() => console.log('Hello')); // As an arrow function.
 
 // Print Goodbye
-executeCallback(function() {
-  console.log('Goodbye');
-});
+// executeCallback(function() {
+//   console.log('Goodbye');
+// });
+executeCallback(() => console.log('Goodbye'));
